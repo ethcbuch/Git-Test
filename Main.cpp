@@ -25,6 +25,16 @@ using namespace std;
  */
 int sum(int num);
 
+
+/**
+ * multiples the numbers from 1 to num then returns the value
+ *
+ * @param int num the number of times you will multiply by the previous values
+ * @return int the total number
+ * 
+ */
+int product(int num);
+
 int main() {
   cout << "Hello World!" << endl;
   
@@ -32,8 +42,9 @@ int main() {
   
   cout << "Please enter a number: ";
   cin >> n;
-  cout << "Total:" << sum(n) << endl;
-  
+  cout << "Total Sum: " << sum(n) << endl;
+  cout << "Total Product: " << product(n) << endl;
+
   return 0;
 }
 
@@ -43,6 +54,15 @@ int sum(int num) {
   
   for (int i = 0; i<=num; i++) {
     total = total + i;
+  }
+  return total;
+}
+
+int product(int num) {
+  int total = 1;
+
+  for (int i = 1; i<=num; i++) {
+    total = total * i;
   }
   return total;
 }
